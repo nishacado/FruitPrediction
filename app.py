@@ -17,7 +17,7 @@ Fruit Recognizer
 #================================= Title Image ===========================
 #================================= About =================================
 st.write("""
-## 1️⃣ About
+## 1.About
 	""")
 st.write("""
 Hi all, Welcome to this project. It is a Fruit Recognizer App!!!
@@ -29,7 +29,7 @@ You have to upload your own test images to test it!!!
 
 #============================ How To Use It ===============================
 st.write("""
-## 2️⃣ How To Use It
+## 2. How To Use It
 	""")
 st.write("""
 Well, it's pretty simple!!! 
@@ -38,12 +38,12 @@ Well, it's pretty simple!!!
 - Please make sure that, you are uploading a picture file!
 - Press the **👉🏼 Predict** button to see the magic!!!
 
-🔘 **NOTE :** *If you upload other than an image file, then it will show an error massage when you will click the* **👉🏼 Predict** *button!!!*
+ **NOTE :** *If you upload other than an image file, then it will show an error massage when you will click the* **👉🏼 Predict** *button!!!*
 	""")
 
 #========================= What It Will Predict ===========================
 st.write("""
-## 3️⃣ What It Will Predict
+## 3️.What It Will Predict
 	""")
 st.write("""
 Well, it can predict wheather the image you have uploaded is the image of a Apple or a Orange!
