@@ -100,7 +100,7 @@ def processing(testing_image_path):
       clf = tree.DecisionTreeClassifier()
       clf = clf.fit(feature, labels)
       # print ((clf.predict([[150, 0]))
-      prediction = clf.predict([[150, 0])
+      prediction = clf.predict([[150, 0]])
       return prediction
 
 def generate_result(prediction):
