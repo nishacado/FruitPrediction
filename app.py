@@ -123,24 +123,24 @@ def generate_result(prediction):
 #=========================== Predict Button Clicked ==========================
 if submit:
 	try:
-		# save image on that directory
-		save_img("temp_dir/test_image.png", img_array)
+# 		# save image on that directory
+# 		save_img("temp_dir/test_image.png", img_array)
 
-		image_path = "temp_dir/test_image.png"
-		# Predicting
-		st.write("👁️ Predicting...")
+# 		image_path = "temp_dir/test_image.png"
+# 		# Predicting
+# 		st.write("👁️ Predicting...")
 
-		model_path_h5 = "model/model.h5"
-		model_path_json = "model/model.json"
-		json_file = open(model_path_json, 'r')
-		loaded_model_json = json_file.read()
-		json_file.close()
-		loaded_model = model_from_json(loaded_model_json)
-		loaded_model.load_weights(model_path_h5)
+# 		model_path_h5 = "model/model.h5"
+# 		model_path_json = "model/model.json"
+# 		json_file = open(model_path_json, 'r')
+# 		loaded_model_json = json_file.read()
+# 		json_file.close()
+# 		loaded_model = model_from_json(loaded_model_json)
+# 		loaded_model.load_weights(model_path_h5)
 
-		loaded_model.compile(loss='binary_crossentropy', metrics=['accuracy'],optimizer='adam')
+# 		loaded_model.compile(loss='binary_crossentropy', metrics=['accuracy'],optimizer='adam')
 
-		prediction = processing(image_path)
+# 		prediction = processing(image_path)
 
 		generate_result(prediction)
 
