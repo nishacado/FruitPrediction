@@ -11,26 +11,16 @@ import webbrowser # inbuilt module
 
 #=================================== Title ===============================
 st.title("""
-Cat 🐱 Or Dog 🐶 Recognizer
+Fruit Recognizer
 	""")
 
 #================================= Title Image ===========================
-st.text("""""")
-img_path_list = ["static/image_1.jpg",
-				"static/image_2.jpg"]
-index = random.choice([0,1])
-image = Image.open(img_path_list[index])
-st.image(
-	        image,
-	        use_column_width=True,
-	    )
-
 #================================= About =================================
 st.write("""
 ## 1️⃣ About
 	""")
 st.write("""
-Hi all, Welcome to this project. It is a Cat Or Dog Recognizer App!!!
+Hi all, Welcome to this project. It is a Fruit Recognizer App!!!
 	""")
 st.write("""
 You have to upload your own test images to test it!!!
@@ -46,7 +36,7 @@ st.write("""
 st.write("""
 Well, it's pretty simple!!!
 - Let me clear first, the model has power to predict image of Cats and Dogs only, so you are requested to give image of a Cat Or a Dog, unless useless prediction can be done!!! 😆 
-- First of all, download image of a Cat 🐈 or a Dog 🐕!
+- First of all, download image of a Apple or Orange!
 - Next, just Browse that file or Drag & drop that file!
 - Please make sure that, you are uploading a picture file!
 - Press the **👉🏼 Predict** button to see the magic!!!
@@ -113,11 +103,11 @@ def generate_result(prediction):
 		""")
 	if prediction[0]<0.5:
 	    st.write("""
-	    	## Model predicts it as an image of a CAT 🐱!!!
+	    	## Model predicts it as an image of a APPLE!!!
 	    	""")
 	else:
 	    st.write("""
-	    	## Model predicts it as an image of a DOG 🐶!!!
+	    	## Model predicts it as an image of a ORANGE!!!
 	    	""")
 
 #=========================== Predict Button Clicked ==========================
@@ -161,5 +151,5 @@ st.text("""""")
 st.text("""""")
 st.text("""""")
 st.write("""
-### ©️ Created By Debmalya Sur
+### ©️ Created By Nishanthi
 	""")
