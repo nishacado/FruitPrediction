@@ -107,13 +107,17 @@ def generate_result(prediction):
 	st.write("""
 	## 🎯 RESULT
 		""")
-	if prediction[0]<0.5:
+	if prediction == [0]:
 	    st.write("""
 	    	## Model predicts it as an image of a APPLE!!!
 	    	""")
-	else:
+	elif prediction == [1]:
 	    st.write("""
 	    	## Model predicts it as an image of a ORANGE!!!
+	    	""")
+	else:
+	    st.write("""
+	    	## Model cannot be predicted!!!
 	    	""")
 
 #=========================== Predict Button Clicked ==========================
