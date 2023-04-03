@@ -25,17 +25,14 @@ Hi all, Welcome to this project. It is a Fruit Recognizer App!!!
 st.write("""
 You have to upload your own test images to test it!!!
 	""")
-st.write("""
-**Or**, if you are too much lazy **(**😎, like me!**)**, then also no problem, we already selected some test images for you, you have to just go to that section & click the **⬇️ Download** button to download those pictures!  
-	""")
+
 
 #============================ How To Use It ===============================
 st.write("""
 ## 2️⃣ How To Use It
 	""")
 st.write("""
-Well, it's pretty simple!!!
-- Let me clear first, the model has power to predict image of Cats and Dogs only, so you are requested to give image of a Cat Or a Dog, unless useless prediction can be done!!! 😆 
+Well, it's pretty simple!!! 
 - First of all, download image of a Apple or Orange!
 - Next, just Browse that file or Drag & drop that file!
 - Please make sure that, you are uploading a picture file!
@@ -49,7 +46,7 @@ st.write("""
 ## 3️⃣ What It Will Predict
 	""")
 st.write("""
-Well, it can predict wheather the image you have uploaded is the image of a Cat 🐈 or a Dog 🐕!
+Well, it can predict wheather the image you have uploaded is the image of a Apple or a Orange!
 	""")
 
 #======================== Time To See The Magic ===========================
