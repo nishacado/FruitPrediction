@@ -4,6 +4,8 @@ from tensorflow.keras.preprocessing.image import load_img, img_to_array, save_im
 from tensorflow.keras.models import model_from_json
 import numpy as np
 import shutil
+import sklearn 
+from sklearn import tree 
 
 import os # inbuilt module
 import random # inbuilt module
@@ -85,14 +87,22 @@ submit = st.button("👉🏼 Predict")
 
 #==================================== Model ==================================
 def processing(testing_image_path):
-    IMG_SIZE = 50
-    img = load_img(testing_image_path, 
-            target_size=(IMG_SIZE, IMG_SIZE), color_mode="grayscale")
-    img_array = img_to_array(img)
-    img_array = img_array/255.0
-    img_array = img_array.reshape((1, 50, 50, 1))   
-    prediction =loaded_model.predict(img_array)    
-    return prediction
+#     IMG_SIZE = 50
+#     img = load_img(testing_image_path, 
+#             target_size=(IMG_SIZE, IMG_SIZE), color_mode="grayscale")
+#     img_array = img_to_array(img)
+#     img_array = img_array/255.0
+#     img_array = img_array.reshape((1, 50, 50, 1))   
+#     prediction =loaded_model.predict(img_array)    
+#     return prediction
+
+feature = [[140,1], [130, 1], [150, 0], [170, 0]]
+label = [0, 0, 1, 1] 
+clf = tree.DecisionTreeClassifier()
+clf = clf.fit(feature, labels)
+# print ((clf.predict([[150, 0]))
+prediction = clf.predict([[150, 0])
+ return prediction
 
 def generate_result(prediction):
 	st.write("""
