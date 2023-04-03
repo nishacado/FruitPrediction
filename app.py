@@ -87,26 +87,30 @@ submit = st.button("👉🏼 Predict")
 
 #==================================== Model ==================================
 def processing(testing_image_path):
-#     IMG_SIZE = 50
-#     img = load_img(testing_image_path, 
-#             target_size=(IMG_SIZE, IMG_SIZE), color_mode="grayscale")
-#     img_array = img_to_array(img)
-#     img_array = img_array/255.0
-#     img_array = img_array.reshape((1, 50, 50, 1))   
-#     prediction =loaded_model.predict(img_array)    
-#     return prediction
-      feature = [[140,1], [130, 1], [150, 0], [170, 0]]
-      label = [0, 0, 1, 1] 
-      clf = tree.DecisionTreeClassifier()
-      clf = clf.fit(feature, labels)
-      # print ((clf.predict([[150, 0]))
-      prediction = clf.predict([[150, 0]])
-      return prediction
+    IMG_SIZE = 50
+    img = load_img(testing_image_path, 
+            target_size=(IMG_SIZE, IMG_SIZE), color_mode="grayscale")
+    img_array = img_to_array(img)
+    img_array = img_array/255.0
+    img_array = img_array.reshape((1, 50, 50, 1))   
+    prediction =loaded_model.predict(img_array)    
+    return prediction
+#       feature = [[140,1], [130, 1], [150, 0], [170, 0]]
+#       label = [0, 0, 1, 1] 
+#       clf = tree.DecisionTreeClassifier()
+#       clf = clf.fit(feature, labels)
+#       # print ((clf.predict([[150, 0]))
+#       prediction = clf.predict([[150, 0]])
+#       return prediction
 
 def generate_result(prediction):
 	st.write("""
-	## 🎯 RESULT
+	## 🎯 RESULT 
 		""")
+	st.write("""
+	## 🎯 RESULT 
+		""")
+	st.write(prediction)
 	if prediction == [0]:
 	    st.write("""
 	    	## Model predicts it as an image of a APPLE!!!
@@ -130,15 +134,15 @@ if submit:
 		# Predicting
 		st.write("👁️ Predicting...")
 
-# 		model_path_h5 = "model/model.h5"
-# 		model_path_json = "model/model.json"
-# 		json_file = open(model_path_json, 'r')
-# 		loaded_model_json = json_file.read()
-# 		json_file.close()
-# 		loaded_model = model_from_json(loaded_model_json)
-# 		loaded_model.load_weights(model_path_h5)
+		model_path_h5 = "model/model.h5"
+		model_path_json = "model/model.json"
+		json_file = open(model_path_json, 'r')
+		loaded_model_json = json_file.read()
+		json_file.close()
+		loaded_model = model_from_json(loaded_model_json)
+		loaded_model.load_weights(model_path_h5)
 
-# 		loaded_model.compile(loss='binary_crossentropy', metrics=['accuracy'],optimizer='adam')
+		loaded_model.compile(loss='binary_crossentropy', metrics=['accuracy'],optimizer='adam')
 
 		prediction = processing(image_path)
 
