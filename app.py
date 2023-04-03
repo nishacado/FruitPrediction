@@ -95,14 +95,13 @@ def processing(testing_image_path):
 #     img_array = img_array.reshape((1, 50, 50, 1))   
 #     prediction =loaded_model.predict(img_array)    
 #     return prediction
-
-feature = [[140,1], [130, 1], [150, 0], [170, 0]]
-label = [0, 0, 1, 1] 
-clf = tree.DecisionTreeClassifier()
-clf = clf.fit(feature, labels)
-# print ((clf.predict([[150, 0]))
-prediction = clf.predict([[150, 0])
- return prediction
+      feature = [[140,1], [130, 1], [150, 0], [170, 0]]
+      label = [0, 0, 1, 1] 
+      clf = tree.DecisionTreeClassifier()
+      clf = clf.fit(feature, labels)
+      # print ((clf.predict([[150, 0]))
+      prediction = clf.predict([[150, 0])
+      return prediction
 
 def generate_result(prediction):
 	st.write("""
