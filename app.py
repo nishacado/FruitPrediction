@@ -107,10 +107,10 @@ def generate_result(prediction):
 	st.write("""
 	## 🎯 RESULT 
 		""")
-	st.write("""
-	## 🎯 RESULT 
-		""")
-	st.write(prediction)
+# 	st.write("""
+# 	## 🎯 RESULT 
+# 		""")
+# 	st.write(prediction)
 	if prediction [0]<0.2:
 	    st.write("""
 	    	## Model predicts it as an image of a APPLE!!!
